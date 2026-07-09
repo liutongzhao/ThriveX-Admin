@@ -1,4 +1,6 @@
+.git
+.idea
 node_modules
-npm-debug.log
-Dockerfile
-.dockerignore
+dist
+*.log
+.DS_Store

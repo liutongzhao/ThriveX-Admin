@@ -6,11 +6,12 @@ import { loadRuntimeConfig } from './utils/config';
 import { updateBaseURL } from './utils/request';
 
 const app = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const basename = import.meta.env.BASE_URL === '/' ? undefined : import.meta.env.BASE_URL.replace(/\/$/, '');
 
 loadRuntimeConfig().then(() => {
   updateBaseURL();
   app.render(
-    <Router>
+    <Router basename={basename}>
       <App />
     </Router>,
   );
