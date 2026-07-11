@@ -10,21 +10,18 @@ pipeline {
     }
 
     stages {
-        stage('Docker Build') {
-            steps {
-                sh 'docker build -t ${FULL_IMAGE} -t ${LATEST_IMAGE} .'
-            }
-        }
-
-        stage('Docker Push') {
-            when {
-                branch 'blog_cuz'
-            }
+        stage('Docker Build and Push') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'github-container-registry', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD')]) {
                     sh 'echo "$DOCKER_PASSWORD" | docker login ${REGISTRY} -u "$DOCKER_USER" --password-stdin'
-                    sh 'docker push ${FULL_IMAGE}'
-                    sh 'docker push ${LATEST_IMAGE}'
+                    sh '''
+                        docker buildx build \
+                          --platform linux/amd64 \
+                          --tag ${FULL_IMAGE} \
+                          --tag ${LATEST_IMAGE} \
+                          --push \
+                          .
+                    '''
                 }
             }
         }
