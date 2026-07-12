@@ -613,7 +613,7 @@ export default () => {
             </Form.Item>
 
             <Form.Item label="网站图标" name="image" rules={[{ required: true, message: '网站图标不能为空' }]}>
-              <Input placeholder="https://liuyuyang.net/logo.png" />
+              <Input placeholder="https://www.cuzisme.com/brand/cuz-icon.png" />
             </Form.Item>
 
             <Form.Item label="网站链接" name="url" rules={[{ required: true, message: '网站链接不能为空' }, { validator: validateURL }]}>

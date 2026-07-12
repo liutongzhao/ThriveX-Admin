@@ -49,7 +49,7 @@ export default () => {
         </Form.Item>
 
         <Form.Item label="头像" name="avatar" rules={[{ required: true, message: '头像不能为空' }]}>
-          <Input placeholder="https://liuyuyang.net/logo.png" />
+          <Input placeholder="https://www.cuzisme.com/brand/cuz-avatar.png" />
         </Form.Item>
 
         <Form.Item label="介绍" name="info" rules={[{ required: true, message: '介绍不能为空' }]}>

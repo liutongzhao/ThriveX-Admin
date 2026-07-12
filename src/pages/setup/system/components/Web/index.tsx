@@ -65,7 +65,7 @@ export default () => {
         </Form.Item>
 
         <Form.Item label="网站图标" name="favicon">
-          <Input placeholder="https://liuyuyang.net/favicon.ico" />
+          <Input placeholder="https://www.cuzisme.com/brand/favicon.ico" />
         </Form.Item>
 
         <Form.Item label="网站描述" name="description" rules={[{ required: true, message: '网站描述不能为空' }]}>
