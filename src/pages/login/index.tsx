@@ -7,6 +7,7 @@ import { UserOutlined, LockOutlined, EyeOutlined, EyeInvisibleOutlined } from '@
 import { getUserDataAPI, loginDataAPI } from '@/api/user';
 import { useUserStore } from '@/stores';
 import { setShowLoginNotification } from '@/components/SystemNotification';
+import logo from '/logo.png';
 
 export default () => {
   const navigate = useNavigate();
@@ -65,7 +66,7 @@ export default () => {
       <div className="relative z-10 w-full max-w-md">
         <div className="bg-[rgba(255,255,255,0.5)] backdrop-blur-xs rounded-3xl shadow-2xl p-8 border border-white/20">
           <div className="flex justify-center space-x-4 mb-8">
-            <img src="/logo.png" alt="" className="w-12 h-12" />
+            <img src={logo} alt="CuZ" className="w-12 h-12" />
             <div className="flex flex-col">
               <h1 className="font-bold text-lg text-slate-700">ThriveX</h1>
               <p className="text-slate-400 text-sm">现代化博客管理系统</p>

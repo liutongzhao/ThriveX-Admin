@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fi';
 import { useConfigStore } from '@/stores';
 import Skeleton from './Skeleton';
+import logo from '/logo.png';
 
 interface Commit {
   commit: {
@@ -238,7 +239,7 @@ const IterativePage = () => {
       <div className="mb-2">
         <div className="flex flex-col gap-4 rounded-2xl border border-slate-200/80 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between dark:border-strokedark dark:bg-boxdark">
           <div className="flex min-w-0 flex-1 items-center justify-center gap-3 sm:justify-start">
-            <img src="/logo.png" alt="" className="size-9 shrink-0 rounded-lg" />
+            <img src={logo} alt="CuZ" className="size-9 shrink-0 rounded-lg" />
             <div className="min-w-0">
               <p className="text-xl font-semibold tracking-tight text-slate-800 dark:text-slate-100">
                 不断改善、成为最佳
