@@ -98,13 +98,13 @@ export default function WebsiteConfigForm({ onSuccess }: InitStepFormProps) {
       onFinish={handleSave}
     >
       <Form.Item label="网站标题" name="title" rules={[{ required: true, message: '请先填写网站标题' }]}>
-        <Input placeholder="例如：ThriveX" />
+        <Input placeholder="例如：Cuz" />
       </Form.Item>
       <Form.Item label="网站副标题" name="subhead">
         <Input placeholder="例如：现代化博客管理系统" />
       </Form.Item>
       <Form.Item label="网站链接" name="url">
-        <Input placeholder="https://liuyuyang.net/" />
+        <Input placeholder="https://www.cuzisme.com/" />
       </Form.Item>
       <Form.Item label="LOGO 地址" name="favicon" rules={[{ required: true, message: '请先填写网站 Logo 地址' }]}>
         <Input placeholder="https://..." />
@@ -116,7 +116,7 @@ export default function WebsiteConfigForm({ onSuccess }: InitStepFormProps) {
         <Input placeholder="例如：Java,前端,Python" />
       </Form.Item>
       <Form.Item label="底部信息" name="footer">
-        <Input placeholder="例如：诚邀贡献者一起共建 ThriveX" />
+        <Input placeholder="例如：记录技术、思考与生活" />
       </Form.Item>
       <Form.Item label="ICP 备案号" name="icp">
         <Input placeholder="例如：豫ICP备2020031040号-1" />

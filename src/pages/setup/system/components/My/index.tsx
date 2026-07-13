@@ -41,11 +41,11 @@ export default () => {
 
       <Form form={form} size="large" layout="vertical" onFinish={onSubmit} className="w-full lg:w-[500px] md:ml-10">
         <Form.Item label="名称" name="name" rules={[{ required: true, message: '名称不能为空' }]}>
-          <Input placeholder="宇阳" />
+          <Input placeholder="铜罩" />
         </Form.Item>
 
         <Form.Item label="邮箱" name="email" rules={[{ required: true, message: '邮箱不能为空' }]}>
-          <Input placeholder="liuyuyang1024@yeah.net" />
+          <Input placeholder="1917225343@qq.com" />
         </Form.Item>
 
         <Form.Item label="头像" name="avatar" rules={[{ required: true, message: '头像不能为空' }]}>

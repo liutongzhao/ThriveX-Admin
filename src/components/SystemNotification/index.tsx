@@ -2,7 +2,7 @@ import { Modal, Button } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 
 const SHOW_NOTIFICATION_KEY = 'show_login_notification';
-const GITHUB_URL = 'https://github.com/LiuYuYang01/ThriveX-Admin';
+const GITHUB_URL = 'https://github.com/liutongzhao';
 
 interface Props {
   open: boolean;
@@ -26,7 +26,7 @@ export default ({ open, onClose }: Props) => {
       <div className="py-4">
         <div className="text-center space-y-4">
           <div className="space-y-2">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">⭐ 喜欢 ThriveX 吗？</h3>
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">⭐ 欢迎来到 Cuz</h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               如果这个项目对你有帮助，欢迎在 GitHub 上给我们一个 Star！
               <br />
@@ -51,7 +51,7 @@ export default ({ open, onClose }: Props) => {
           </div>
 
           <div className="pt-2">
-            <p className="text-sm text-gray-500 dark:text-gray-400">ThriveX 是一个年轻、高颜值、全开源、永不收费的现代化博客管理系统</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Cuz 用于记录技术、思考与生活</p>
           </div>
         </div>
       </div>

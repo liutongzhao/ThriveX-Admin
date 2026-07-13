@@ -71,7 +71,7 @@ export default function EmailConfigForm({ onSuccess }: InitStepFormProps) {
         <InputNumber className="w-full!" min={1} max={65535} placeholder="465" />
       </Form.Item>
       <Form.Item name="username" label="发件邮箱账号" rules={[{ required: true, message: '请输入发件邮箱账号' }]}>
-        <Input placeholder="liuyuyang1024@yeah.net" />
+        <Input placeholder="1917225343@qq.com" />
       </Form.Item>
       <Form.Item name="password" label="授权码 / 密码" rules={[{ required: true, message: '请输入授权码 / 密码' }]}>
         <Input.Password placeholder="fagweg3wfqwtrtgwg" autoComplete="new-password" />

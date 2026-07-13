@@ -601,7 +601,7 @@ export default () => {
         <Spin spinning={editLoading}>
           <Form form={form} layout="vertical" size="large" initialValues={link} onFinish={onSubmit}>
             <Form.Item label="网站标题" name="title" rules={[{ required: true, message: '网站标题不能为空' }]}>
-              <Input placeholder="ThriveX" />
+              <Input placeholder="Cuz" />
             </Form.Item>
 
             <Form.Item label="网站描述" name="description" rules={[{ required: true, message: '网站描述不能为空' }]}>
@@ -609,7 +609,7 @@ export default () => {
             </Form.Item>
 
             <Form.Item label="站长邮箱" name="email">
-              <Input placeholder="liuyuyang1024@yeah.net" />
+              <Input placeholder="1917225343@qq.com" />
             </Form.Item>
 
             <Form.Item label="网站图标" name="image" rules={[{ required: true, message: '网站图标不能为空' }]}>
@@ -617,11 +617,11 @@ export default () => {
             </Form.Item>
 
             <Form.Item label="网站链接" name="url" rules={[{ required: true, message: '网站链接不能为空' }, { validator: validateURL }]}>
-              <Input placeholder="https://liuyuyang.net/" />
+              <Input placeholder="https://www.cuzisme.com/" />
             </Form.Item>
 
             <Form.Item label="订阅地址" name="rss" rules={[{ validator: validateURL }]}>
-              <Input placeholder="https://liuyuyang.net/api/rss" />
+              <Input placeholder="https://www.cuzisme.com/api/rss" />
             </Form.Item>
 
             <Form.Item name="typeId" label="网站类型" rules={[{ required: true, message: '网站类型不能为空' }]}>

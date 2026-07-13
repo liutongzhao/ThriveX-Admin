@@ -46,9 +46,9 @@ const PROJECTS: {
 }[] = [
     {
       key: 'blog',
-      title: 'ThriveX Blog',
+      title: 'Cuz Blog',
       repo: 'ThriveX-Blog',
-      cacheKey: 'blog_project_iterative',
+      cacheKey: 'cuz_blog_project_iterative',
       icon: FiGlobe,
       accent: {
         icon: 'text-emerald-600 dark:text-emerald-400',
@@ -60,9 +60,9 @@ const PROJECTS: {
     },
     {
       key: 'admin',
-      title: 'ThriveX Admin',
+      title: 'Cuz Admin',
       repo: 'ThriveX-Admin',
-      cacheKey: 'admin_project_iterative',
+      cacheKey: 'cuz_admin_project_iterative',
       icon: FiLayout,
       accent: {
         icon: 'text-amber-600 dark:text-amber-400',
@@ -74,9 +74,9 @@ const PROJECTS: {
     },
     {
       key: 'server',
-      title: 'ThriveX Server',
+      title: 'Cuz Server',
       repo: 'ThriveX-Server',
-      cacheKey: 'server_project_iterative',
+      cacheKey: 'cuz_server_project_iterative',
       icon: FiServer,
       accent: {
         icon: 'text-violet-600 dark:text-violet-400',
@@ -177,7 +177,7 @@ const IterativePage = () => {
       else setLoading(true);
 
       const res = await fetch(
-        `https://api.github.com/repos/LiuYuYang01/${project}/commits?per_page=10`,
+        `https://api.github.com/repos/liutongzhao/${project}/commits?sha=blog_cuz&per_page=10`,
       );
       const data = await res.json();
       const result = data?.map((item: Commit) => ({
@@ -187,15 +187,15 @@ const IterativePage = () => {
 
       switch (project) {
         case 'ThriveX-Blog':
-          sessionStorage.setItem('blog_project_iterative', JSON.stringify(result));
+          sessionStorage.setItem('cuz_blog_project_iterative', JSON.stringify(result));
           setBlogData(result);
           break;
         case 'ThriveX-Admin':
-          sessionStorage.setItem('admin_project_iterative', JSON.stringify(result));
+          sessionStorage.setItem('cuz_admin_project_iterative', JSON.stringify(result));
           setAdminData(result);
           break;
         case 'ThriveX-Server':
-          sessionStorage.setItem('server_project_iterative', JSON.stringify(result));
+          sessionStorage.setItem('cuz_server_project_iterative', JSON.stringify(result));
           setServerData(result);
           break;
       }
@@ -224,9 +224,9 @@ const IterativePage = () => {
     const list = Array.from({ length: 5 }, (_, i) => currentYear - i);
     setYearList(list.map((value) => ({ value, label: String(value) })));
 
-    loadData('blog_project_iterative', setBlogData, 'ThriveX-Blog');
-    loadData('admin_project_iterative', setAdminData, 'ThriveX-Admin');
-    loadData('server_project_iterative', setServerData, 'ThriveX-Server');
+    loadData('cuz_blog_project_iterative', setBlogData, 'ThriveX-Blog');
+    loadData('cuz_admin_project_iterative', setAdminData, 'ThriveX-Admin');
+    loadData('cuz_server_project_iterative', setServerData, 'ThriveX-Server');
 
     const timer = setTimeout(() => setInitialLoading(false), 500);
     return () => clearTimeout(timer);
@@ -271,13 +271,13 @@ const IterativePage = () => {
                 GitHub 贡献热力图
               </h3>
               <p className="text-xs text-slate-400 dark:text-slate-500">
-                @liuyuyang01 · {year} 年
+                @liutongzhao · {year} 年
               </p>
             </div>
           </div>
           <div className="flex justify-center overflow-x-auto px-4 py-6 sm:px-6">
             <GitHubCalendar
-              username="liuyuyang01"
+              username="liutongzhao"
               year={year}
               fontSize={12}
               blockSize={12}

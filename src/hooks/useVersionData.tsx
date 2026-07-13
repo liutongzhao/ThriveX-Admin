@@ -14,7 +14,7 @@ const useVersionData = () => {
     const getVersionData = async () => {
       try {
         // 先检查 sessionStorage 中是否有缓存的版本数据
-        const cachedVersion = sessionStorage.getItem('project_version');
+        const cachedVersion = sessionStorage.getItem('cuz_admin_version');
 
         if (cachedVersion) {
           const parsedVersion = JSON.parse(cachedVersion);
@@ -26,11 +26,10 @@ const useVersionData = () => {
         }
 
         // 如果没有缓存或缓存无效，则调用接口获取数据
-        // https://api.github.com/repos/LiuYuYang01/ThriveX-Blog/releases
-        const { data } = await axios.get('https://api.github.com/repos/LiuYuYang01/ThriveX-Admin/releases/latest');
+        const { data } = await axios.get('https://api.github.com/repos/liutongzhao/ThriveX-Admin/releases/latest');
         setVersion(data);
         // 将新数据存储到 sessionStorage
-        sessionStorage.setItem('project_version', JSON.stringify(data));
+        sessionStorage.setItem('cuz_admin_version', JSON.stringify(data));
       } catch (error) {
         console.error('获取版本信息失败:', error);
       }
