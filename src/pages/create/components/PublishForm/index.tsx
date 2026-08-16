@@ -268,7 +268,7 @@ const PublishForm = ({ data, closeModel }: Props) => {
             content: data.content,
             tagIds,
             cateIds,
-            config: { isDraft: false, isDel: false, ...values.config },
+            config: { ...values.config, isDraft: Boolean(isDraft), isDel: false },
             createTime,
           });
           message.success(isDraft ? '已保存为草稿' : '发布成功');
